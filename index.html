@@ -1,0 +1,860 @@
+<!doctype html>
+<html>
+	<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+	<title>Rohan Dey</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+
+	<style type="text/css">
+	@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+	background: #fff;
+	font-family: Lato, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	margin: 0 0 80px;
+	color: #222;
+}
+b, strong, .area {
+font-weight: 400;
+color: #333;
+}
+a {
+	color: #2A94D6;
+}
+a:focus,
+a:hover {
+	color: #F3AE4E;
+	text-decoration: none;
+}
+p {
+	line-height: 1.5;
+	margin: 0;
+}
+p + p {
+	margin-top: 10px;
+}
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0;
+	font-weight: 400;
+	color: #333;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.2em;
+}
+.date {
+	font-weight: 400;
+}
+section {
+	margin-top: 30px;
+}
+li {
+	line-height: 1.5;
+	list-style: none;
+	padding-bottom: 5px;
+}
+li:before {
+	content: "\f052";
+	float: left;
+	font: 13px Octicons;
+	margin-top: 6px;
+	margin-left: -20px;
+	opacity: .2;
+	position: absolute;
+}
+blockquote {
+	border-left: 5px solid #e7e9ec;
+	font-size: 14px;
+}
+em {
+	color: #95a5a6;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.container {
+	max-width: 750px;
+	padding: 0 30px;
+}
+.col-sm-6 {
+	margin-bottom: 10px;
+}
+.col-sm-12 h4 {
+	margin-top: 12px;
+}
+.col-sm-12 + .col-sm-12 {
+	margin-top: 30px;
+}
+#header {
+	background: #F0F1F2;
+	padding: 50px 0;
+	margin-bottom: 30px;
+}
+#header h2 {
+	color: #647687;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+#content h3 {
+	color: #F3AE4E;
+	margin-top: -4px;
+	font-weight: 400;
+}
+#content aside {
+	text-align: right;
+	padding-right: 30px;
+}
+#profiles .network {
+	text-transform: capitalize;
+}
+#work .position,
+#volunteer .position {
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+#education .area {
+	font-weight: 700;
+}
+#education .area:before {
+	content: "\f0d7";
+	font: 16px Octicons;
+	margin-right: 6px;
+}
+#education .studyType {
+	margin-left: 25px;
+}
+#awards .summary,
+#publications .summary {
+	margin-top: 8px;
+}
+#publications .website a:before {
+	content: attr(href);
+}
+#skills .keywords, #education .courses {
+	padding: 0;
+	margin: 0;
+}
+#skills .keywords li:before, #education .courses li:before {
+	content: "";
+}
+#skills .keywords li, #education .courses li {
+	display: inline-block;
+	padding: 0px 6px;
+	margin: 3px 4px 4px 0;
+	border: 1px solid #ccc;
+	line-height: 1.5em;
+	border-radius: 1px;
+	background-color: #fafafa
+}
+
+@media (min-width: 480px) {
+	.strike-through {
+		border-top: 1px solid #f4f6f6;
+		height: 20px;
+		margin-top: 12px;
+		margin-bottom: -2px;
+		position: relative;
+	}
+	.strike-through span,
+	.strike-through a {
+		background: #fff;
+		position: absolute;
+	}
+	.strike-through span:first-child {
+		padding-right: 20px;
+		margin-top: -12px;
+	}
+	.strike-through span + span {
+		font-size: 14px;
+		margin-top: -10px;
+		padding-left: 20px;
+		right: 0;
+	}
+}
+@media (max-width: 768px) {
+	.col-sm-6:last-child {
+		margin-bottom: 0px;
+	}
+	#content aside {
+		margin-bottom: 10px;
+		padding-right: 0;
+		text-align: left;
+	}
+	#publications .website a:before {
+		content: "View publication";
+	}
+	.work-item {
+		padding-bottom: 10px
+	}
+	.work-item:last-child {
+		padding-bottom: 0;
+	}
+}
+@media (max-width: 480px) {
+	#content {
+		padding: 15px;
+	}
+	.container {
+		padding: 0 15px;
+	}
+	h1 {
+		font-size: 1.5em;
+	}
+	h2 {
+		font-size: 1.4em;
+	}
+	h3 {
+		font-size: 1.3em;
+	}
+	h4 {
+		font-size: 1em;
+	}
+	.date {
+		margin-bottom: 5px;
+	}
+	.strike-through span:first-child {
+		margin-bottom: 7px;
+	}
+	.strike-through span {
+		display: block;
+	}
+	#header {
+		margin-bottom: 0px;
+		padding: 20px 0;
+	}
+	#header h2 {
+		font-size: 1.2em;
+	}
+	#actions {
+		display: none;
+	}
+	section {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	.website.pull-right {
+		float: none !important;
+	}
+}
+@media print {
+	body {
+		margin: 0;
+		font-size: 12px
+	}
+	#header {
+		padding: 0;
+		margin-bottom: 0px;
+	}
+	#content aside {
+		margin-bottom: 0px;
+	}
+	section {
+		margin-top: 25px;
+	}
+	.col-sm-6 {
+		margin-bottom: 0px;
+	}
+	.col-sm-12 h4 {
+		margin-top: 0px;
+	}
+	.strike-through {
+		border: none;
+		margin: 0px 0 0;
+		padding: 10px 0 5px;
+		height: auto;
+		line-height: 1em;
+	}
+	#work .position, #volunteer .position, #work .summary, #volunteer .summary {
+		margin-bottom: 0px;
+		padding-bottom: 8px;
+	}
+	.work-item {
+		padding-bottom: 0px;
+		page-break-inside: avoid;
+	}
+	#volunteer{
+		page-break-inside: avoid;
+	}
+	#awards{
+		page-break-inside: avoid;
+	}
+	#skills {
+		page-break-inside: avoid;
+	}
+	.website {
+		display: none;
+	}
+}
+
+	</style>
+
+	</head>
+	<body>
+
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9 col-sm-push-3">
+					<h1>
+						Rohan Dey
+					</h1>
+					<h2>
+						Programmer &amp; Designer
+					</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="content" class="container">
+
+	<section id="contact" class="row">
+		<aside class="col-sm-3">
+			<h3>Contact</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<strong>Email</strong>
+				<div class="email"><a href="mailto:hello@rohandey.com" target="_blank">hello@rohandey.com</a></div>
+			</div>
+			<div class="col-sm-6">
+				<strong>Phone</strong>
+				<div class="phone">+91-xxx-xxx-xxxx</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section id="about" class="row">
+		<aside class="col-sm-3">
+			<h3>About</h3>
+		</aside>
+		<div class="col-sm-9">
+			<p>Rohan hails from Assam. He has earned degree in Economics from University of Mumbai. He is a self-taught programmer and designer. He was fascinated by gaming which led to explore about how software and apps are build. He started to build websites from an early age as a freelance developer. He worked with numerous startups &amp; public companies before co-founding his own startup which was acquired.</p>
+		</div>
+	</section>
+	<section id="profiles" class="row">
+		<aside class="col-sm-3">
+			<h3>Profiles</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+				<div class="col-sm-6">
+					<strong class="network">
+						Twitter
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="http://www.twitter.com/rohan_rockz" target="_blank">rohan_rockz</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<strong class="network">
+						Linkedin
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="https://linkedin.com/in/rohandey" target="_blank">rohandey</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<strong class="network">
+						Github
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="https://github.com/hackable" target="_blank">hackable</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<strong class="network">
+						Behance
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="https://www.behance.net/hackable" target="_blank">hackable</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="work" class="row">
+		<aside class="col-sm-3">
+			<h3>Work</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12 work-item">
+				<h4 class="strike-through">
+					<span>PropTiger.com</span>
+					<span class="date">
+						2016-09-01 — 2017-03-01
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="https://www.proptiger.com" target="_blank">https://www.proptiger.com</a>
+				</div>
+				<div class="position">
+					Tech Lead
+				</div>
+				<div class="summary">
+					<p>PropTiger.com is India’s leading online real estate platform with a dedicated team of 500+ Relationship Managers spread across the country. </p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Improved listings approval time by 50%  by implementing deep-learning based classification model  of real estate photos.</li>
+					<li class="bullet">Developed an AVM for prediction of property prices based on historical data and trends.</li>
+					<li class="bullet">Created WhatsApp-bot which was used to aggregate thousands of messages from peer-to-peer Broker Groups within the WhatsApp Network. Then the raw data was then pipelined then converted to structured listing data. </li>
+				</ul>
+			</div>
+			<div class="col-sm-12 work-item">
+				<h4 class="strike-through">
+					<span>PropRates</span>
+					<span class="date">
+						2015-11-01 — 2016-08-01
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="http://www.proprates.com" target="_blank">http://www.proprates.com</a>
+				</div>
+				<div class="position">
+					Co-Founder
+				</div>
+				<div class="summary">
+					<p>PropRates is an advanced data collation tool will enables users to make more informed choices based on actual transaction prices while buying or renting property</p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Created user scenarios,UX specs, task flows and wireframes for the project.</li>
+					<li class="bullet">Architected the whole application to be API-First by design.</li>
+					<li class="bullet">Dockerized the application and deployed on Amazon Web Service (AWS) cloud using ECS.</li>
+					<li class="bullet">Recruited and managed a small software development team.</li>
+				</ul>
+			</div>
+			<div class="col-sm-12 work-item">
+				<h4 class="strike-through">
+					<span>Snipp Interactive Inc</span>
+					<span class="date">
+						2014-08-01 — 2015-09-01
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="https://www.snipp.com" target="_blank">https://www.snipp.com</a>
+				</div>
+				<div class="position">
+					Senior UX Developer
+				</div>
+				<div class="summary">
+					<p>Snipp enables brands, agencies and marketers to engage with customers and drive sales through receipt processing, mobile promotions, contests, loyalty, analytics, mobile messaging and other shopper marketing solutions.</p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Drafted UX &amp; UI specs, wireframes , task flows and style guide for self-serve loyalty application.</li>
+					<li class="bullet">Designed and developed a self-serve front-end application for which interacted with Snipp’s API. It allowed small merchants to create new receipt processing campaigns using a simple wizard format</li>
+					<li class="bullet">Created Frontend-UI for admin dashboard for company-wide intranet</li>
+				</ul>
+			</div>
+			<div class="col-sm-12 work-item">
+				<h4 class="strike-through">
+					<span>Consultant</span>
+					<span class="date">
+						2012-01-01 — 2014-01-01
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="" target="_blank"></a>
+				</div>
+				<div class="position">
+					Freelance
+				</div>
+				<div class="summary">
+					<p>As a consultant, I have worked with number of funded start-ups and medium-large business from around the globe. Helped them conceptualize, visualize and bring their ideas into life through rapid prototyping and  minimum viable product development.</p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Developed a Social Network Platform for a Local TV Channel in Sacramento</li>
+					<li class="bullet">Implemented a digitized version of gold on the bitcoin blockchain using colored coin open-assets protocol for a client.</li>
+					<li class="bullet">Developed a Whois &amp; DNS tools website for an Australian ISP.</li>
+					<li class="bullet">Created Facebook Apps for  SMB&#x27;s and large enterprises.</li>
+					<li class="bullet">Co-created one the first daily deal aggregation ad networks.</li>
+				</ul>
+			</div>
+			<div class="col-sm-12 work-item">
+				<h4 class="strike-through">
+					<span>Lindotiger Networks</span>
+					<span class="date">
+						2007-12-01 — 2010-01-01
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="http://www.lindotiger.com" target="_blank">http://www.lindotiger.com</a>
+				</div>
+				<div class="position">
+					Software Enginner
+				</div>
+				<div class="summary">
+					<p>Software Engineer Lindotiger was one the first online advertising networks specifically designed for advertisers and app developers across a network of major social networks such as Facebook, Myspace, Bebo.</p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Developed Customized Ad-Delivery Engine Using OpenX </li>
+					<li class="bullet">Architected multi-tenant, database sharding and distributed delivery infrastructure </li>
+					<li class="bullet">Developed Behavioral Beacon and Ad Targeting Technology</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="volunteer" class="row">
+		<aside class="col-sm-3">
+			<h3>Volunteering</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Getdavai</span>
+					<span class="date">
+						2012-12-31 — 2017-02-01
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="" target="_blank"></a>
+				</div>
+				<div class="position">
+					Creator
+				</div>
+				<div class="summary">
+					<p>Drug discovery &amp; comparison engine it helps people to find alternative drugs based on same composition and shows them by price.</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="education" class="row">
+		<aside class="col-sm-3">
+			<h3>Education</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>University of Mumbai</span>
+					<span class="date">
+						2011-06-01 — 2014-01-01
+					</span>
+				</h4>
+				<div class="area">
+					Economics
+				</div>
+				<div class="studyType">
+					Bachelor
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="publications" class="row">
+		<aside class="col-sm-3">
+			<h3>Publications</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>GetDavai – Drug discovery engine</span>
+					<span class="date">
+						2012-12-31
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="http://startcup.in/getdavai-a-drug-discovery-and-comparison-engine-to-find-alternative-drugs-based-on-the-same-composition/"></a>
+				</div>
+				<div class="publisher">
+					<em>Published by</em>
+					<strong>Startcup</strong>
+				</div>
+				<div class="summary">
+					<p>GetDavai – A drug discovery and comparison engine to find alternative drugs based on the same composition</p>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>PropTiger acquires PropRates</span>
+					<span class="date">
+						2016-09-05
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="https://economictimes.indiatimes.com/small-biz/money/proptiger-acquires-proprates/articleshow/54015689.cms"></a>
+				</div>
+				<div class="publisher">
+					<em>Published by</em>
+					<strong>Economic Times</strong>
+				</div>
+				<div class="summary">
+					<p>Online real estate advisor PropTiger.com has acqui-hired Mumbai-based start-up PropRates, which is a pioneer in data collation tools and first in the industry who gathers actual real estate transaction data. </p>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>PropTiger buys property transaction data provider..</span>
+					<span class="date">
+						2016-09-05
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="http://livemint.com/Companies/4OmbUdpH7KFFs75wUwlKtN/PropTiger-buys-property-transaction-data-provider-PropRates.html"></a>
+				</div>
+				<div class="publisher">
+					<em>Published by</em>
+					<strong>Livemint</strong>
+				</div>
+				<div class="summary">
+					<p>Online real estate advisor PropTiger.com said on Monday that it has acquired Mumbai-based start-up PropRates, which gathers real estate transaction data.</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="skills" class="row">
+		<aside class="col-sm-3">
+			<h3>Skills</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<div class="name">
+					<h4 class="strike-through">
+						<span>Programming Languages</span>
+					</h4>
+				</div>
+				<ul class="keywords">
+					<li>PHP</li>
+					<li>CoffeScript</li>
+					<li>Ruby</li>
+					<li>R</li>
+					<li>HTML &amp; CSS</li>
+					<li>Javascript</li>
+					<li>Solidity</li>
+					<li>Ivy</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<div class="name">
+					<h4 class="strike-through">
+						<span>Mobile Frameworks</span>
+					</h4>
+				</div>
+				<ul class="keywords">
+					<li>React Native</li>
+					<li>PhoneGap</li>
+					<li>Swift</li>
+					<li>iOS SDK</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<div class="name">
+					<h4 class="strike-through">
+						<span>Web Frameworks</span>
+					</h4>
+				</div>
+				<ul class="keywords">
+					<li>Laravel</li>
+					<li> ExpressJS</li>
+					<li>Ruby on Rails</li>
+					<li>CodeIgniter</li>
+					<li>Koa</li>
+					<li>AngularJS</li>
+					<li>React</li>
+					<li>Backbone.js</li>
+					<li>Vue.js</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<div class="name">
+					<h4 class="strike-through">
+						<span>Databases</span>
+					</h4>
+				</div>
+				<ul class="keywords">
+					<li>MySQL</li>
+					<li>MariaDB</li>
+					<li>MongoDB</li>
+					<li>Redis</li>
+					<li>AWS DynamoDB</li>
+					<li>Redshift</li>
+					<li>Memcache</li>
+					<li>BigQuery</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<div class="name">
+					<h4 class="strike-through">
+						<span>Product Devopment Tools</span>
+					</h4>
+				</div>
+				<ul class="keywords">
+					<li>Balsamiq</li>
+					<li>Sketch</li>
+					<li>Invision App</li>
+					<li>Marvel</li>
+					<li>AWS</li>
+					<li>API-First</li>
+					<li>Kaban</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<div class="name">
+					<h4 class="strike-through">
+						<span>Online Advertising</span>
+					</h4>
+				</div>
+				<ul class="keywords">
+					<li>Google Adwords</li>
+					<li>Facebook Ads</li>
+					<li>Mailchimp</li>
+					<li>Google Analytics</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="languages" class="row">
+		<aside class="col-sm-3">
+			<h3>Languages</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="language">
+					<strong>English</strong>
+				</div>
+				<div class="fluency">
+					5/5
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="language">
+					<strong>Hindi</strong>
+				</div>
+				<div class="fluency">
+					4/5
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="language">
+					<strong>Bengali</strong>
+				</div>
+				<div class="fluency">
+					3/5
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="language">
+					<strong>Assamese</strong>
+				</div>
+				<div class="fluency">
+					3/5
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="interests" class="row">
+		<aside class="col-sm-3">
+			<h3>Interests</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Travel</h4>
+				</div>
+				<ul class="keywords">
+					<li>Backpacking</li>
+					<li>Camping</li>
+					<li>Trekking</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Sports</h4>
+				</div>
+				<ul class="keywords">
+					<li>Cricket</li>
+					<li>Football</li>
+					<li>Snooker</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="references" class="row">
+		<aside class="col-sm-3">
+			<h3>References</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<blockquote class="reference">
+					<p>Rohan is a great designer and market strategist who understands people and technology equally well. He also has a knack of building products that people love to use.</p>
+					<p class="name">
+						<strong>— Rajan Chandi </strong>
+					</p>
+				</blockquote>
+			</div>
+			<div class="col-sm-12">
+				<blockquote class="reference">
+					<p>I can recommend Rohan as a person with great proficiency and deep expertise of modern business solutions. Great, precise and intelligent professional. Lots of work and little talk. Deliver results and move on. That&#x27;s Rohan&#x27;s way. I strongly endorse Rohan.</p>
+					<p class="name">
+						<strong>— Partha Ranjan Nayak</strong>
+					</p>
+				</blockquote>
+			</div>
+			<div class="col-sm-12">
+				<blockquote class="reference">
+					<p>Rohan is supersmart, superfast, and supernice to boot! He was awesome to work with &amp; really knows his stuff, always up on the latest tools &amp; techniques. If you have the chance to work with him - DO!</p>
+					<p class="name">
+						<strong>— John D. Fauller</strong>
+					</p>
+				</blockquote>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	</div>
+
+	</body>
+</html>
